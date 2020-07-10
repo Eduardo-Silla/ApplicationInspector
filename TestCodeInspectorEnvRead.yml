@@ -20,6 +20,6 @@ steps:
     targetType: 'inline'
     script: |
       if ($env:BUILD_REPOSITORY_ID -like "*github*") {
-        Write-Host '("https://product-catalog-api-onees-prod-disco-east-us.prod.avalanch.es/products?artifactType=GitHub%2FRepository&artifactId=github://github.com/$env:BUILD_REPOSITORY_ID")' }
+        Write-Host ("https://product-catalog-api-onees-prod-disco-east-us.prod.avalanch.es/products?artifactType=GitHub%2FRepository&artifactId=github://github.com/$env:BUILD_REPOSITORY_ID") }
       else {
-        Write-Host '("https://product-catalog-api-onees-prod-disco-east-us.prod.avalanch.es/products?artifactType=Scms.Git.Vsts&artifactId=vsts://$env:SYSTEM_COLLECTIONID/$env:SYSTEM_TEAMPROJECTID/$env:BUILD_REPOSITORY_ID")' }
+        Write-Host ("https://product-catalog-api-onees-prod-disco-east-us.prod.avalanch.es/products?artifactType=Scms.Git.Vsts&artifactId=vsts://$env:SYSTEM_COLLECTIONID/$env:SYSTEM_TEAMPROJECTID/$env:BUILD_REPOSITORY_ID") }
